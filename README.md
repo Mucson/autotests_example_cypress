@@ -1,1 +1,1 @@
-# autotests_learning
+Repo for my pet project learning automation frameworks
