@@ -1,1 +1,1 @@
-Repo for my pet project learning automation frameworks
+Repo for my pet projects learning automation frameworks
