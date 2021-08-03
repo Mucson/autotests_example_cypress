@@ -1,6 +1,6 @@
 class SearchResultPage {
     
-    bodylable() {
+    getBodyText() {
         return cy.get('body')
     }
 }

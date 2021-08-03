@@ -4,38 +4,41 @@ class DemoPage {
         return cy.get('[name="firstname"]')
     }
 
-    lastnameFiled() {
+    lastnameField() {
         return cy.get('[name="lastname"]')
     }
 
-    emailFiled() {
+    emailField() {
         return cy.get('[name="email"]')
     }
 
-    phoneFiled() {
+    phoneField() {
         return cy.get('[name="phone"]')
     }
 
-    jobtitleFiled() {
+    jobtitleField() {
         return cy.get('[name="jobtitle"]')
     }
 
-    companyFiled() {
+    companyField() {
         return cy.get('[name="company"]')
     }
 
-    countryselectFiled() {
-        return cy.get('select')
+    jobfunctionSelect() {
+        return cy.get('[name="user_type"]')
     }
 
-    descriptionFiled() {
+    countrySelect() {
+        return cy.get('[name="lead_country"]')
+    }
+
+    descriptionField() {
         return cy.get('[name="see_in_demo"]')
     }
 
     submitButton() {
         return cy.get('[type="submit"]')
     }
-
 }
 
 export default new DemoPage

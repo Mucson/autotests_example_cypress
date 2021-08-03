@@ -4,14 +4,13 @@ class MainPage {
         return cy.visit('https://www.testim.io/')
     }
 
-    getheader() {
+    getHeader() {
         return cy.get('h1')
     }
 
-    opendemopage() {
+    getButtonToDemoPage() {
         return cy.get('.default').should('contain', 'Schedule a demo')
     }
-
 }
 
 export default new MainPage

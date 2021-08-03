@@ -5,28 +5,31 @@ import SearchResultPage from "../PageObject/SearchResultPage"
 
 describe ('Auto test using page object', () => {
     it ('authentication and open demo page', () => {
-        cy.fixture('textAssertions').then(text_assertions => {
+        cy.fixture('textAssertions').then(assertionData => {
             MainPage.open()
-            MainPage.getheader().contains(text_assertions.h1)
-            MainPage.opendemopage().click()
+            MainPage.getHeader().contains(assertionData.h1)
+            MainPage.getButtonToDemoPage().click()
         })
     })
-    it ('Schedule a demo', () => {
+    
+    it ('schedule a demo', () => {
         cy.fixture('credentials').then(user => {
             DemoPage.firstnameField().type(user.firstname)
-            DemoPage.lastnameFiled().type(user.lastname)
-            DemoPage.emailFiled().type(user.email)
-            DemoPage.phoneFiled().type(user.phone)
-            DemoPage.jobtitleFiled().type(user.jobtitle)
-            DemoPage.companyFiled().type(user.company)
-            DemoPage.countryselectFiled().select(user.country)
-            DemoPage.descriptionFiled().type(user.description)
+            DemoPage.lastnameField().type(user.lastname)
+            DemoPage.emailField().type(user.email)
+            DemoPage.phoneField().type(user.phone)
+            DemoPage.jobtitleField().type(user.jobtitle)
+            DemoPage.companyField().type(user.company)
+            DemoPage.jobfunctionSelect().select(user.jobfunction)
+            DemoPage.countrySelect().select(user.country)
+            DemoPage.descriptionField().type(user.description)
             DemoPage.submitButton().click()
         })
     })
+
     it ('assertion label', () => {
-        cy.fixture('textAssertions').then(text_assertions => {
-            SearchResultPage.bodylable().contains(text_assertions.successful_label)
+        cy.fixture('textAssertions').then(assertionData => {
+            SearchResultPage.getBodyText().contains(assertionData.successfulLabel)
         })
     })
 })
