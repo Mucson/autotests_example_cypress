@@ -29,7 +29,7 @@ describe ('Auto test using page object', () => {
 
     it ('assertion label', () => {
         cy.fixture('textAssertions').then(assertionData => {
-            SearchResultPage.getBodyText().contains(assertionData.successfulLabel)
+            SearchResultPage.getBodyText().contains(assertionData.successfulText)
         })
     })
 })
