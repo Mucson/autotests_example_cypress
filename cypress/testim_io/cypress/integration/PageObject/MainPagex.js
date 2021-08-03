@@ -9,7 +9,7 @@ class MainPage {
     }
 
     getButtonToDemoPage() {
-        return cy.get('.default').should('contain', 'Schedule a demo')
+        return cy.get('a[href*= "schedule-demo"]')
     }
 }
 
